@@ -21,6 +21,7 @@
 		8C1CFE701C5ACA3300D5C249 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE6F1C5ACA3300D5C249 /* InterfaceController.swift */; };
 		8C1CFE721C5ACA3300D5C249 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE711C5ACA3300D5C249 /* ExtensionDelegate.swift */; };
 		8C1CFE741C5ACA3300D5C249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE731C5ACA3300D5C249 /* Assets.xcassets */; };
+		8C1CFE8C1C5AE22100D5C249 /* Elements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE8E1C5AE22100D5C249 /* Elements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		8C1CFE711C5ACA3300D5C249 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		8C1CFE731C5ACA3300D5C249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C1CFE751C5ACA3300D5C249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1CFE8D1C5AE22100D5C249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Elements.plist; sourceTree = "<group>"; };
+		8C1CFE901C5AE2C100D5C249 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Elements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,7 @@
 		8C1CFE351C5ACA3200D5C249 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				8C1CFE891C5ADC7800D5C249 /* ElementsPlist */,
 				8C1CFE361C5ACA3200D5C249 /* AppDelegate.swift */,
 				8C1CFE381C5ACA3200D5C249 /* ViewController.swift */,
 				8C1CFE3A1C5ACA3200D5C249 /* Main.storyboard */,
@@ -210,6 +214,14 @@
 				8C1CFE751C5ACA3300D5C249 /* Info.plist */,
 			);
 			path = "Elements WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8C1CFE891C5ADC7800D5C249 /* ElementsPlist */ = {
+			isa = PBXGroup;
+			children = (
+				8C1CFE8E1C5AE22100D5C249 /* Elements.plist */,
+			);
+			name = ElementsPlist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +352,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 8C1CFE2A1C5ACA3200D5C249;
 			productRefGroup = 8C1CFE341C5ACA3200D5C249 /* Products */;
@@ -361,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C1CFE411C5ACA3200D5C249 /* LaunchScreen.storyboard in Resources */,
+				8C1CFE8C1C5AE22100D5C249 /* Elements.plist in Resources */,
 				8C1CFE3E1C5ACA3200D5C249 /* Assets.xcassets in Resources */,
 				8C1CFE3C1C5ACA3200D5C249 /* Main.storyboard in Resources */,
 			);
@@ -482,6 +496,15 @@
 				8C1CFE611C5ACA3300D5C249 /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		8C1CFE8E1C5AE22100D5C249 /* Elements.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C1CFE8D1C5AE22100D5C249 /* Base */,
+				8C1CFE901C5AE2C100D5C249 /* pl */,
+			);
+			name = Elements.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
