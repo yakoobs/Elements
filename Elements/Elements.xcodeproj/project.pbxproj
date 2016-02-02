@@ -22,6 +22,11 @@
 		8C1CFE721C5ACA3300D5C249 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE711C5ACA3300D5C249 /* ExtensionDelegate.swift */; };
 		8C1CFE741C5ACA3300D5C249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE731C5ACA3300D5C249 /* Assets.xcassets */; };
 		8C1CFE8C1C5AE22100D5C249 /* Elements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE8E1C5AE22100D5C249 /* Elements.plist */; };
+		8CDE414B1C6032B5000269B1 /* GameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE414A1C6032B5000269B1 /* GameElement.swift */; };
+		8CDE414D1C60337D000269B1 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE414C1C60337D000269B1 /* GameManager.swift */; };
+		8CFB5B3E1C6016EE007D5D6C /* ElementsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */; };
+		8CFB5B411C601730007D5D6C /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B401C601730007D5D6C /* Element.swift */; };
+		8CFB5B431C601AC9007D5D6C /* ElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B421C601AC9007D5D6C /* ElementsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +110,11 @@
 		8C1CFE751C5ACA3300D5C249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C1CFE8D1C5AE22100D5C249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Elements.plist; sourceTree = "<group>"; };
 		8C1CFE901C5AE2C100D5C249 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Elements.plist; sourceTree = "<group>"; };
+		8CDE414A1C6032B5000269B1 /* GameElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameElement.swift; path = Model/GameElement.swift; sourceTree = "<group>"; };
+		8CDE414C1C60337D000269B1 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameManager.swift; path = Model/GameManager.swift; sourceTree = "<group>"; };
+		8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementsManagerTests.swift; sourceTree = "<group>"; };
+		8CFB5B401C601730007D5D6C /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Model/Element.swift; sourceTree = "<group>"; };
+		8CFB5B421C601AC9007D5D6C /* ElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementsManager.swift; path = Model/ElementsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +176,7 @@
 		8C1CFE351C5ACA3200D5C249 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				8CFB5B3F1C60170D007D5D6C /* Model */,
 				8C1CFE891C5ADC7800D5C249 /* ElementsPlist */,
 				8C1CFE361C5ACA3200D5C249 /* AppDelegate.swift */,
 				8C1CFE381C5ACA3200D5C249 /* ViewController.swift */,
@@ -182,6 +193,7 @@
 			children = (
 				8C1CFE4B1C5ACA3300D5C249 /* ElementsTests.swift */,
 				8C1CFE4D1C5ACA3300D5C249 /* Info.plist */,
+				8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */,
 			);
 			path = ElementsTests;
 			sourceTree = "<group>";
@@ -222,6 +234,17 @@
 				8C1CFE8E1C5AE22100D5C249 /* Elements.plist */,
 			);
 			name = ElementsPlist;
+			sourceTree = "<group>";
+		};
+		8CFB5B3F1C60170D007D5D6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CFB5B401C601730007D5D6C /* Element.swift */,
+				8CFB5B421C601AC9007D5D6C /* ElementsManager.swift */,
+				8CDE414A1C6032B5000269B1 /* GameElement.swift */,
+				8CDE414C1C60337D000269B1 /* GameManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,7 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C1CFE391C5ACA3200D5C249 /* ViewController.swift in Sources */,
+				8CDE414D1C60337D000269B1 /* GameManager.swift in Sources */,
 				8C1CFE371C5ACA3200D5C249 /* AppDelegate.swift in Sources */,
+				8CFB5B411C601730007D5D6C /* Element.swift in Sources */,
+				8CFB5B431C601AC9007D5D6C /* ElementsManager.swift in Sources */,
+				8CDE414B1C6032B5000269B1 /* GameElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C1CFE4C1C5ACA3300D5C249 /* ElementsTests.swift in Sources */,
+				8CFB5B3E1C6016EE007D5D6C /* ElementsManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +768,7 @@
 				8C1CFE7A1C5ACA3300D5C249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C1CFE7C1C5ACA3300D5C249 /* Build configuration list for PBXNativeTarget "Elements WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -748,6 +777,7 @@
 				8C1CFE7E1C5ACA3300D5C249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C1CFE801C5ACA3300D5C249 /* Build configuration list for PBXNativeTarget "Elements" */ = {
 			isa = XCConfigurationList;
@@ -756,6 +786,7 @@
 				8C1CFE821C5ACA3300D5C249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C1CFE831C5ACA3300D5C249 /* Build configuration list for PBXNativeTarget "ElementsTests" */ = {
 			isa = XCConfigurationList;
@@ -764,6 +795,7 @@
 				8C1CFE851C5ACA3300D5C249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C1CFE861C5ACA3300D5C249 /* Build configuration list for PBXNativeTarget "ElementsUITests" */ = {
 			isa = XCConfigurationList;
@@ -772,6 +804,7 @@
 				8C1CFE881C5ACA3300D5C249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
