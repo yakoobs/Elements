@@ -11,4 +11,7 @@ import Foundation
 struct GameElement {
     var element: Element
     var answers: [String]
+    var correctAnswer: String {
+        return element.symbol
+    }
 }

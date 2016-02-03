@@ -9,7 +9,6 @@
 import XCTest
 @testable import Elements
 
-
 class ElementsLoaderTests: XCTestCase {
 
     var elementsManager: ElementsManager!
@@ -34,7 +33,4 @@ class ElementsLoaderTests: XCTestCase {
         let expectedSymbol = "Ac"
         XCTAssertEqual(element?.symbol, expectedSymbol, "Element's symbol is not the same as the expected one")
     }
-    
-    
-
 }
