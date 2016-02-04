@@ -31,5 +31,4 @@ class GameViewModel {
     func isAnswerCorrect(answer: String) -> Bool {
         return answer == currentGameElement.correctAnswer
     }
-    
 }
