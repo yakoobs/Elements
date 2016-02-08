@@ -10,25 +10,24 @@ import Foundation
 
 class GameViewModel {
     private let gameEngine = GameEngine()
-    private var currentGameElement: GameElement!
     
     init() {
-        drawNextElement()
+        drawNext()
     }
     
-    func drawNextElement() {
-        currentGameElement = gameEngine.drawNextGameElement()
+    func drawNext() {
+        gameEngine.drawNextGameElement()
     }
     
     var queryTitle: String {
-        return currentGameElement.element.name
+        return gameEngine.query
     }
     
     var answers: [String] {
-        return currentGameElement.answers
+        return gameEngine.answers
     }
     
     func isAnswerCorrect(answer: String) -> Bool {
-        return answer == currentGameElement.correctAnswer
+        return gameEngine.isUserAnswerCorrect(answer)
     }
 }

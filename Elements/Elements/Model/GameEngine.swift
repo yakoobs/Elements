@@ -11,6 +11,15 @@ import Foundation
 class GameEngine {
     private let elementsManager = ElementsManager()
     private var gameElements = [GameElement]()
+    private var currentGameElement: GameElement!
+
+    var query: String {
+        return currentGameElement.element.name
+    }
+    
+    var answers: [String] {
+        return currentGameElement.answers
+    }
     
     private func prepareGameElements() {
         gameElements = elementsManager.elements.map({ GameElement(element:$0, answers: prepareAnswers($0) ) })
@@ -28,11 +37,15 @@ class GameEngine {
         return answers.shuffled()
     }
     
-    func drawNextGameElement() -> GameElement {
+    func drawNextGameElement(){
         if gameElements.isEmpty {
             prepareGameElements()
         }
         
-        return gameElements.removeFirst()
+        currentGameElement = gameElements.removeFirst()
+    }
+    
+    func isUserAnswerCorrect(userAnswer: String) -> Bool {
+        return userAnswer == currentGameElement.correctAnswer
     }
 }

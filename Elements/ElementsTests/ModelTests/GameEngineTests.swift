@@ -16,6 +16,7 @@ class GameEngineTests: XCTestCase {
     override func setUp() {
         super.setUp()
         gameEngine = GameEngine()
+        gameEngine.drawNextGameElement()
     }
     
     override func tearDown() {
@@ -23,35 +24,24 @@ class GameEngineTests: XCTestCase {
         super.tearDown()
     }
     
-    func testDrawingASignleGameElement() {
-        let gameElement = gameEngine.drawNextGameElement()
-        XCTAssertNotNil(gameElement, "Drawn element should not be nil")
-    }
-    
-    func testDrawnGameElementContainsElement() {
-        let gameElement = gameEngine.drawNextGameElement()
-        XCTAssertNotNil(gameElement.element, "Drawn game element should should contain an element")
-    }
-    
-    func testDrawnGameElementContainsFourAnswers() {
-        let gameElement = gameEngine.drawNextGameElement()
-        let expectedNumberOfAnswers = 4
-        XCTAssertEqual(gameElement.answers.count, expectedNumberOfAnswers, "Expected number of answers should be equal to 4")
-    }
-    
-    func testDrawnGameElementAnswersContainCorrectAnswer() {
-        let gameElement = gameEngine.drawNextGameElement()
-        let correctAnswer = gameElement.correctAnswer
-        XCTAssertTrue(gameElement.answers.contains(correctAnswer), "Answers array should contain correct answer")
-    }
     
     func testThatDrawingWorksAfterLargeAmountOfDraws() {
         for _ in 1...9999 {
             gameEngine.drawNextGameElement()
         }
         
-        let gameElement = gameEngine.drawNextGameElement()
-        XCTAssertNotNil(gameElement, "Drawn element should not be nil")
+        gameEngine.drawNextGameElement()
+        XCTAssertNotNil(gameEngine.query, "Drawn query should not be nil")
+        XCTAssertNotNil(gameEngine.answers, "Drawn answers should not be nil")
+    }
+    
+    func testThatGameEnginePreparesQuery() {
+        XCTAssertNotNil(gameEngine.query, "Query should not be nil")
+    }
+    
+    func testThatGameEnginePrepares4Answers() {
+        let expectedNumberOfAnswers = 4
+        XCTAssertEqual(gameEngine.answers.count, expectedNumberOfAnswers, "The number of prepared answers is not the same as expected one")
     }
 
 }
