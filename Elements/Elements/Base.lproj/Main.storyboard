@@ -23,28 +23,40 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-mY-LtL">
                                         <rect key="frame" x="0.0" y="144" width="276" height="136"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="chosenAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zLo-m0-9Aj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKS-yV-Tyf">
                                         <rect key="frame" x="0.0" y="0.0" width="276" height="136"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="chosenAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iW6-b0-k3M"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcp-Cu-hrF">
                                         <rect key="frame" x="284" y="144" width="276" height="136"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="chosenAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGv-Md-GaE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqW-vd-MgQ">
                                         <rect key="frame" x="284" y="0.0" width="276" height="136"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="chosenAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIb-S4-tU8"/>
                                         </connections>
@@ -77,7 +89,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-ap-an7">
                                         <rect key="frame" x="8" y="8" width="544" height="264"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
