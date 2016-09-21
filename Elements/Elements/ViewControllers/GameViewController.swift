@@ -9,8 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
-    private let viewModel = GameViewModel()
+    fileprivate let viewModel = GameViewModel()
     @IBOutlet weak var queryLabel: UILabel!
     @IBOutlet var answersButtons: [UIButton]!
     
@@ -21,36 +20,39 @@ class GameViewController: UIViewController {
     
     func setupSubviews() {
         queryLabel.text = viewModel.queryTitle
-        for (index,button) in answersButtons.enumerate() {
-            button.setTitle(viewModel.answers[index], forState: UIControlState.Normal)
-            button.backgroundColor = UIColor.whiteColor()
+        for (index,button) in answersButtons.enumerated() {
+            button.setTitle(viewModel.answers[index], for: UIControlState())
+            button.backgroundColor = UIColor.white
         }
-        self.view.userInteractionEnabled = true
+        self.view.isUserInteractionEnabled = true
     }
     
-    
-    @IBAction func chosenAnswerPressed(sender: UIButton) {
-        self.view.userInteractionEnabled = false
+    @IBAction func chosenAnswerPressed(_ sender: UIButton) {
+        self.view.isUserInteractionEnabled = false
         
         let answer = sender.currentTitle!
-        sender.backgroundColor = viewModel.isAnswerCorrect(answer) ? UIColor.greenColor() : UIColor.redColor()
-        for button in answersButtons {
-            if viewModel.isAnswerCorrect(button.currentTitle!) {
-                button.backgroundColor = UIColor.greenColor()
-            }
-        }
-    
-        let seconds = 1.0
-        let delay = seconds * Double(NSEC_PER_SEC)
-        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        let isCorrect = viewModel.isCorrect(answer: answer)
+        sender.backgroundColor = isCorrect ? UIColor.green : UIColor.red
         
+        if !isCorrect { hilightCorrectAnswer() }
         
-        dispatch_after(dispatchTime, dispatch_get_main_queue(), { [unowned self] in
+        drawNextAfterDelay()
+    }
+}
+
+//MARK: - Private
+extension GameViewController {
+    fileprivate func drawNextAfterDelay() {
+        DispatchQueue.main.asyncAfter(deadline: viewModel.dispatchTime, execute: { [unowned self] in
             self.viewModel.drawNext()
             self.setupSubviews()
         })
-        
-        
+    }
+    
+    fileprivate func hilightCorrectAnswer() {
+        for button in answersButtons where viewModel.isCorrect(answer: button.currentTitle!) {
+            button.backgroundColor = UIColor.green
+        }
     }
 }
 

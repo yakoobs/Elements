@@ -17,11 +17,11 @@ class ElementsManager {
         loadElements()
     }
     
-    private func loadElements() {
+    fileprivate func loadElements() {
         let kPlistFileName = "Elements"
         let kPlistFileType = "plist"
-        if let path = NSBundle.mainBundle().pathForResource(kPlistFileName, ofType: kPlistFileType),
-            array = NSArray(contentsOfFile: path) as? [Dictionary<String,AnyObject>] {
+        if let path = Bundle.main.path(forResource: kPlistFileName, ofType: kPlistFileType),
+            let array = NSArray(contentsOfFile: path) as? [Dictionary<String,AnyObject>] {
                 
             elements = array.map( { Element(dictionary: $0) } )
         }

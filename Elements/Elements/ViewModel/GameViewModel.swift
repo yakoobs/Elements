@@ -9,7 +9,7 @@
 import Foundation
 
 class GameViewModel {
-    private let gameEngine = GameEngine()
+    fileprivate let gameEngine = GameEngine()
     
     init() {
         drawNext()
@@ -27,7 +27,14 @@ class GameViewModel {
         return gameEngine.answers
     }
     
-    func isAnswerCorrect(answer: String) -> Bool {
-        return gameEngine.isUserAnswerCorrect(answer)
+    func isCorrect(answer: String) -> Bool {
+        return gameEngine.isCorrect(userAnswer: answer)
+    }
+    
+    var dispatchTime: DispatchTime {
+        let kSeconds = 1.0
+        let delay = kSeconds * Double(NSEC_PER_SEC)
+        let dispatchTime = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
+        return dispatchTime
     }
 }

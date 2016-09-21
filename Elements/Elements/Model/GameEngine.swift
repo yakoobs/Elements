@@ -9,9 +9,9 @@
 import Foundation
 
 class GameEngine {
-    private let elementsManager = ElementsManager()
-    private var gameElements = [GameElement]()
-    private var currentGameElement: GameElement!
+    fileprivate let elementsManager = ElementsManager()
+    fileprivate var gameElements = [GameElement]()
+    fileprivate var currentGameElement: GameElement!
 
     var query: String {
         return currentGameElement.element.name
@@ -21,12 +21,12 @@ class GameEngine {
         return currentGameElement.answers
     }
     
-    private func prepareGameElements() {
+    fileprivate func prepareGameElements() {
         gameElements = elementsManager.elements.map({ GameElement(element:$0, answers: prepareAnswers($0) ) })
         gameElements.shuffle()
     }
     
-    private func prepareAnswers(element:Element) -> [String] {
+    fileprivate func prepareAnswers(_ element:Element) -> [String] {
         var theOtherElements = elementsManager.elements.filter({$0.symbol != element.symbol})
         theOtherElements.shuffle()
         
@@ -34,6 +34,7 @@ class GameEngine {
         for _ in 1...3 {
             answers.append(theOtherElements.removeFirst().symbol)
         }
+        
         return answers.shuffled()
     }
     
@@ -45,7 +46,7 @@ class GameEngine {
         currentGameElement = gameElements.removeFirst()
     }
     
-    func isUserAnswerCorrect(userAnswer: String) -> Bool {
+    func isCorrect(userAnswer: String) -> Bool {
         return userAnswer == currentGameElement.correctAnswer
     }
 }

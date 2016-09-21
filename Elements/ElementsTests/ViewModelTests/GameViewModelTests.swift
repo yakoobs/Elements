@@ -37,13 +37,14 @@ class GameViewModelTests: XCTestCase {
     }
     
     func testThatOneOfTheAnswersIsCorrect() {
-        let expectation = expectationWithDescription("correct answer is present")
+        let expectation = self.expectation(description: "correct answer is present")
         for answer in gameViewModel.answers {
-            if gameViewModel.isAnswerCorrect(answer) {
+            if gameViewModel.isCorrect(answer: answer) {
                 expectation.fulfill()
             }
         }
-        waitForExpectationsWithTimeout(0.1) { (error) -> Void in
+        
+        waitForExpectations(timeout: 0.1) { (error) -> Void in
             print("There should be at least one correct answer")
         }
     }
