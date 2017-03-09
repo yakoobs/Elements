@@ -24,11 +24,11 @@ class GameViewController: UIViewController {
             button.setTitle(viewModel.answers[index], for: UIControlState())
             button.backgroundColor = UIColor.white
         }
-        self.view.isUserInteractionEnabled = true
+        view.isUserInteractionEnabled = true
     }
     
     @IBAction func chosenAnswerPressed(_ sender: UIButton) {
-        self.view.isUserInteractionEnabled = false
+        view.isUserInteractionEnabled = false
         
         let answer = sender.currentTitle!
         let isCorrect = viewModel.isCorrect(answer: answer)
