@@ -22,11 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7A5-ZK-Ebu">
-                                <rect key="frame" x="20" y="300" width="560" height="280"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A5-ZK-Ebu">
+                                <rect key="frame" x="16" y="333.5" width="343" height="313.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-mY-LtL">
-                                        <rect key="frame" x="0.0" y="144" width="276" height="136"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-mY-LtL">
+                                        <rect key="frame" x="0.0" y="161" width="167.5" height="152.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -35,8 +35,8 @@
                                             <action selector="chosenAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zLo-m0-9Aj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKS-yV-Tyf">
-                                        <rect key="frame" x="0.0" y="0.0" width="276" height="136"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKS-yV-Tyf">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="153"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -45,8 +45,8 @@
                                             <action selector="chosenAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iW6-b0-k3M"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcp-Cu-hrF">
-                                        <rect key="frame" x="284" y="144" width="276" height="136"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcp-Cu-hrF">
+                                        <rect key="frame" x="175.5" y="161" width="167.5" height="152.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -55,8 +55,8 @@
                                             <action selector="chosenAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGv-Md-GaE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqW-vd-MgQ">
-                                        <rect key="frame" x="284" y="0.0" width="276" height="136"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqW-vd-MgQ">
+                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="153"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -88,11 +88,11 @@
                                     <constraint firstItem="qKS-yV-Tyf" firstAttribute="top" secondItem="7A5-ZK-Ebu" secondAttribute="top" id="zaS-cy-1vB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cC-md-AV4">
-                                <rect key="frame" x="20" y="20" width="560" height="280"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cC-md-AV4">
+                                <rect key="frame" x="16" y="20" width="343" height="313.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-ap-an7">
-                                        <rect key="frame" x="8" y="8" width="544" height="264"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-ap-an7">
+                                        <rect key="frame" x="8" y="8" width="327" height="297.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
