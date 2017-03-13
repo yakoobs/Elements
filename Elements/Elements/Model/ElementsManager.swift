@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ElementsManager {
+final class ElementsManager {
 
     var elements: [Element]
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+final class GameViewController: UIViewController {
     fileprivate let viewModel = GameViewModel()
     @IBOutlet weak var queryLabel: UILabel!
     @IBOutlet var answersButtons: [UIButton]!
@@ -18,14 +18,7 @@ class GameViewController: UIViewController {
         setupSubviews()
     }
     
-    func setupSubviews() {
-        queryLabel.text = viewModel.queryTitle
-        for (index,button) in answersButtons.enumerated() {
-            button.setTitle(viewModel.answers[index], for: UIControlState())
-            button.backgroundColor = UIColor.white
-        }
-        view.isUserInteractionEnabled = true
-    }
+
     
     @IBAction func chosenAnswerPressed(_ sender: UIButton) {
         view.isUserInteractionEnabled = false
@@ -42,6 +35,15 @@ class GameViewController: UIViewController {
 
 //MARK: - Private
 extension GameViewController {
+    fileprivate func setupSubviews() {
+        queryLabel.text = viewModel.queryTitle
+        for (index,button) in answersButtons.enumerated() {
+            button.setTitle(viewModel.answers[index], for: UIControlState())
+            button.backgroundColor = UIColor.white
+        }
+        view.isUserInteractionEnabled = true
+    }
+    
     fileprivate func drawNextAfterDelay() {
         DispatchQueue.main.asyncAfter(deadline: viewModel.dispatchTime, execute: { [unowned self] in
             self.viewModel.drawNext()

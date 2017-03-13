@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GameViewModel {
+struct GameViewModel {
     fileprivate let gameEngine = GameEngine()
     
     init() {

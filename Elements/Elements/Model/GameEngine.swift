@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GameEngine {
+final class GameEngine {
     fileprivate let elementsManager = ElementsManager()
     fileprivate var gameElements = [GameElement]()
     fileprivate var currentGameElement: GameElement!
