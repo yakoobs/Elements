@@ -45,9 +45,9 @@ extension GameViewController {
     }
     
     fileprivate func drawNextAfterDelay() {
-        DispatchQueue.main.asyncAfter(deadline: viewModel.dispatchTime, execute: { [unowned self] in
-            self.viewModel.drawNext()
-            self.setupSubviews()
+        DispatchQueue.main.asyncAfter(deadline: viewModel.dispatchTime, execute: { [weak self] in
+            self?.viewModel.drawNext()
+            self?.setupSubviews()
         })
     }
     
