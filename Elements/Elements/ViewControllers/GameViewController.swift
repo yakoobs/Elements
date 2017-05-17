@@ -39,11 +39,7 @@ extension GameViewController {
         queryLabel.text = viewModel.queryTitle
         for (index,button) in answersButtons.enumerated() {
             button.setTitle(viewModel.answers[index], for: UIControlState())
-            button.backgroundColor = UIColor.cyan
-            button.layer.cornerRadius = 5
-            button.layer.borderWidth = 1
-            button.layer.borderColor = UIColor.black.cgColor
-            
+            button.backgroundColor = UIColor(colorLiteralRed: 102/255, green: 255/255, blue: 204/255, alpha: 1.0)
         }
         view.isUserInteractionEnabled = true
     }
@@ -58,7 +54,47 @@ extension GameViewController {
     fileprivate func hilightCorrectAnswer() {
         for button in answersButtons where viewModel.isCorrect(answer: button.currentTitle!) {
             button.backgroundColor = UIColor.green
+
+        }
+        
+    }
+}
+
+extension UIView {
+
+       @IBInspectable var cornerRadius: Double {
+        get {
+            return Double(self.layer.cornerRadius)
+        }
+        set {
+            self.layer.cornerRadius = CGFloat(newValue)
+        }
+    }
+    
+       @IBInspectable var borderWidth: Double {
+        get {
+            return Double(self.layer.borderWidth)
+        }
+        set {
+            self.layer.borderWidth = CGFloat(newValue)
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            self.layer.borderColor = newValue?.cgColor
         }
     }
 }
+
+
+
+
+
+
+
+
 

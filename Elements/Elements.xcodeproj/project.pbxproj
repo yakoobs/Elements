@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21DBD8ED1ECCD05500ED254B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBD8EC1ECCD05500ED254B /* MenuViewController.swift */; };
 		8C1CFE371C5ACA3200D5C249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE361C5ACA3200D5C249 /* AppDelegate.swift */; };
 		8C1CFE391C5ACA3200D5C249 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE381C5ACA3200D5C249 /* GameViewController.swift */; };
 		8C1CFE3C1C5ACA3200D5C249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE3A1C5ACA3200D5C249 /* Main.storyboard */; };
@@ -90,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21DBD8EC1ECCD05500ED254B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8C1CFE331C5ACA3200D5C249 /* Elements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1CFE361C5ACA3200D5C249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C1CFE381C5ACA3200D5C249 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ViewControllers/GameViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				8C1CFE381C5ACA3200D5C249 /* GameViewController.swift */,
+				21DBD8EC1ECCD05500ED254B /* MenuViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				TargetAttributes = {
 					8C1CFE321C5ACA3200D5C249 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = L5DG6HE4MZ;
 						LastSwiftMigration = 0800;
 					};
 					8C1CFE461C5ACA3300D5C249 = {
@@ -425,10 +429,12 @@
 					};
 					8C1CFE5A1C5ACA3300D5C249 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = L5DG6HE4MZ;
 						LastSwiftMigration = 0800;
 					};
 					8C1CFE691C5ACA3300D5C249 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = L5DG6HE4MZ;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -510,6 +516,7 @@
 				8CDE414D1C60337D000269B1 /* GameEngine.swift in Sources */,
 				8C1CFE371C5ACA3200D5C249 /* AppDelegate.swift in Sources */,
 				8CFB5B411C601730007D5D6C /* Element.swift in Sources */,
+				21DBD8ED1ECCD05500ED254B /* MenuViewController.swift in Sources */,
 				8C9763CB1C62C82700F56DA2 /* GameViewModel.swift in Sources */,
 				8CFB5B431C601AC9007D5D6C /* ElementsManager.swift in Sources */,
 				8CC960D81C60A53300A58690 /* ArrayExt.swift in Sources */,
@@ -698,6 +705,7 @@
 		8C1CFE791C5ACA3300D5C249 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = L5DG6HE4MZ;
 				INFOPLIST_FILE = "Elements WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jakub.sokolowski.Elements.watchkitapp.watchkitextension;
@@ -713,6 +721,7 @@
 		8C1CFE7A1C5ACA3300D5C249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = L5DG6HE4MZ;
 				INFOPLIST_FILE = "Elements WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jakub.sokolowski.Elements.watchkitapp.watchkitextension;
@@ -730,6 +739,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L5DG6HE4MZ;
 				IBSC_MODULE = Elements_WatchKit_Extension;
 				INFOPLIST_FILE = "Elements WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jakub.sokolowski.Elements.watchkitapp;
@@ -747,6 +757,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L5DG6HE4MZ;
 				IBSC_MODULE = Elements_WatchKit_Extension;
 				INFOPLIST_FILE = "Elements WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jakub.sokolowski.Elements.watchkitapp;
@@ -763,11 +774,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L5DG6HE4MZ;
 				INFOPLIST_FILE = Elements/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jakub.sokolowski.Elements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -775,11 +788,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L5DG6HE4MZ;
 				INFOPLIST_FILE = Elements/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jakub.sokolowski.Elements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
