@@ -12,13 +12,15 @@ final class GameViewController: UIViewController {
     fileprivate let viewModel = GameViewModel()
     @IBOutlet weak var queryLabel: UILabel!
     @IBOutlet var answersButtons: [UIButton]!
+    @IBOutlet weak var attemptsLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
+    var attempts = 3
+    var points: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
     }
-    
-
     
     @IBAction func chosenAnswerPressed(_ sender: UIButton) {
         view.isUserInteractionEnabled = false
@@ -27,7 +29,16 @@ final class GameViewController: UIViewController {
         let isCorrect = viewModel.isCorrect(answer: answer)
         sender.backgroundColor = isCorrect ? UIColor.green : UIColor.red
         
-        if !isCorrect { hilightCorrectAnswer() }
+        if !isCorrect {
+            hilightCorrectAnswer()
+             attempts -= 1
+            if attempts == 0 {
+            callGameOverViewController()
+            }
+           
+        } else {
+            points += 1
+        }
         
         drawNextAfterDelay()
     }
@@ -36,6 +47,8 @@ final class GameViewController: UIViewController {
 //MARK: - Private
 extension GameViewController {
     fileprivate func setupSubviews() {
+        attemptsLabel.text = String(attempts)
+        pointsLabel.text = String(points)
         queryLabel.text = viewModel.queryTitle
         for (index,button) in answersButtons.enumerated() {
             button.setTitle(viewModel.answers[index], for: UIControlState())
@@ -54,11 +67,19 @@ extension GameViewController {
     fileprivate func hilightCorrectAnswer() {
         for button in answersButtons where viewModel.isCorrect(answer: button.currentTitle!) {
             button.backgroundColor = UIColor.green
-
         }
         
     }
-}
+    
+    func callGameOverViewController() {
+        // here I must add some delay just before Game Over View Controller appear or some smooth animation
+        // because transformation between last incorrect answer and "game over!" inscription it's too fast
+        let gameOverViewController  = self.storyboard?.instantiateViewController(withIdentifier: "gameOver")
+            self.present(gameOverViewController!, animated: true, completion: nil)
+        }
+
+    }
+
 
 extension UIView {
 
