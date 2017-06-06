@@ -12,6 +12,13 @@ final class GameEngine {
     fileprivate let elementsManager = ElementsManager()
     fileprivate var gameElements = [GameElement]()
     fileprivate var currentGameElement: GameElement!
+    let kStartingNumberOfAttempts = 3
+    var playerMistakes = 0
+    var points = 0
+    
+    var attempts: Int {
+        return kStartingNumberOfAttempts - playerMistakes
+    }
 
     var query: String {
         return currentGameElement.element.name
@@ -19,6 +26,14 @@ final class GameEngine {
     
     var answers: [String] {
         return currentGameElement.answers
+    }
+    
+    var correctAnswer: String {
+        return currentGameElement.correctAnswer
+    }
+    
+    var isGameOver: Bool {
+        return playerMistakes >= kStartingNumberOfAttempts
     }
     
     fileprivate func prepareGameElements() {
@@ -47,6 +62,12 @@ final class GameEngine {
     }
     
     func isCorrect(userAnswer: String) -> Bool {
-        return userAnswer == currentGameElement.correctAnswer
+        guard userAnswer == correctAnswer else {
+            playerMistakes += 1
+            return false
+        }
+        
+        points += 1
+        return true
     }
 }

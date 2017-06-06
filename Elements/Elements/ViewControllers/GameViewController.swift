@@ -14,8 +14,6 @@ final class GameViewController: UIViewController {
     @IBOutlet var answersButtons: [UIButton]!
     @IBOutlet weak var attemptsLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
-    var attempts = 3
-    var points: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +29,6 @@ final class GameViewController: UIViewController {
         
         if !isCorrect {
             hilightCorrectAnswer()
-             attempts -= 1
-            if attempts == 0 {
-            callGameOverViewController()
-            }
-           
-        } else {
-            points += 1
         }
         
         drawNextAfterDelay()
@@ -47,8 +38,8 @@ final class GameViewController: UIViewController {
 //MARK: - Private
 extension GameViewController {
     fileprivate func setupSubviews() {
-        attemptsLabel.text = String(attempts)
-        pointsLabel.text = String(points)
+        attemptsLabel.text = viewModel.attempts
+        pointsLabel.text = viewModel.points
         queryLabel.text = viewModel.queryTitle
         for (index,button) in answersButtons.enumerated() {
             button.setTitle(viewModel.answers[index], for: UIControlState())
@@ -59,8 +50,13 @@ extension GameViewController {
     
     fileprivate func drawNextAfterDelay() {
         DispatchQueue.main.asyncAfter(deadline: viewModel.dispatchTime, execute: { [weak self] in
-            self?.viewModel.drawNext()
-            self?.setupSubviews()
+            let isOver = self?.viewModel.isGameOver ?? true
+            if isOver {
+                self?.callGameOverViewController()
+            } else {
+                self?.viewModel.drawNext()
+                self?.setupSubviews()
+            }
         })
     }
     
@@ -79,43 +75,3 @@ extension GameViewController {
         }
 
     }
-
-
-extension UIView {
-
-       @IBInspectable var cornerRadius: Double {
-        get {
-            return Double(self.layer.cornerRadius)
-        }
-        set {
-            self.layer.cornerRadius = CGFloat(newValue)
-        }
-    }
-    
-       @IBInspectable var borderWidth: Double {
-        get {
-            return Double(self.layer.borderWidth)
-        }
-        set {
-            self.layer.borderWidth = CGFloat(newValue)
-        }
-    }
-    
-    @IBInspectable var borderColor: UIColor? {
-        get {
-            return UIColor(cgColor: layer.borderColor!)
-        }
-        set {
-            self.layer.borderColor = newValue?.cgColor
-        }
-    }
-}
-
-
-
-
-
-
-
-
-

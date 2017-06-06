@@ -37,4 +37,16 @@ struct GameViewModel {
         let dispatchTime = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
         return dispatchTime
     }
+    
+    var isGameOver: Bool {
+        return gameEngine.isGameOver
+    }
+    
+    var points: String {
+        return String(gameEngine.points)
+    }
+    
+    var attempts: String {
+        return String(gameEngine.attempts)
+    }
 }
