@@ -31,6 +31,10 @@ struct GameViewModel {
         return gameEngine.isCorrect(userAnswer: answer)
     }
     
+    func userHasAnswered(_ userAnswer: String) -> Bool {
+        return gameEngine.userHasAnswered(userAnswer)
+    }
+    
     var dispatchTime: DispatchTime {
         let kSeconds = 1.0
         let delay = kSeconds * Double(NSEC_PER_SEC)

@@ -62,12 +62,16 @@ final class GameEngine {
     }
     
     func isCorrect(userAnswer: String) -> Bool {
-        guard userAnswer == correctAnswer else {
-            playerMistakes += 1
-            return false
+        return userAnswer == correctAnswer
+    }
+    
+    func userHasAnswered(_ userAnswer: String) -> Bool {
+        if isCorrect(userAnswer: userAnswer) {
+            points += 1
+            return true
         }
-        
-        points += 1
-        return true
+        playerMistakes += 1
+        return false
     }
 }
+
