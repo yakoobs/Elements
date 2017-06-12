@@ -24,7 +24,7 @@ final class GameViewController: UIViewController {
         view.isUserInteractionEnabled = false
         
         let answer = sender.currentTitle!
-        let isCorrect = viewModel.isCorrect(answer: answer)
+        let isCorrect = viewModel.userHasAnswered(answer)
         sender.backgroundColor = isCorrect ? UIColor.green : UIColor.red
         
         if !isCorrect {

@@ -48,4 +48,10 @@ class GameViewModelTests: XCTestCase {
             print("There should be at least one correct answer")
         }
     }
+    
+    func testThatUserIncorrectAnswerIsDetected() {
+        let kTestIncorrectAnswer = "xxxxx"
+        let result = gameViewModel.userHasAnswered(kTestIncorrectAnswer)
+        XCTAssertFalse(result, "The aswer is not correct")
+    }
 }

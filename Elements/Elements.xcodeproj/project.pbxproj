@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213EA1C01EED5D94000AE032 /* ArrayExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213EA1BF1EED5D94000AE032 /* ArrayExtTests.swift */; };
 		21DBD8ED1ECCD05500ED254B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBD8EC1ECCD05500ED254B /* MenuViewController.swift */; };
 		21F4F7C21ED6B2E200EFDFFF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4F7C11ED6B2E200EFDFFF /* GameOverViewController.swift */; };
 		68C60EDD1EE75DC7005C579B /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C60EDC1EE75DC7005C579B /* UIViewExt.swift */; };
@@ -93,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		213EA1BF1EED5D94000AE032 /* ArrayExtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtTests.swift; path = ExtensionTests/ArrayExtTests.swift; sourceTree = "<group>"; };
 		21DBD8EC1ECCD05500ED254B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		21F4F7C11ED6B2E200EFDFFF /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		68C60EDC1EE75DC7005C579B /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExt.swift; path = Extensions/UIViewExt.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		213EA1BE1EED5D63000AE032 /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				213EA1BF1EED5D94000AE032 /* ArrayExtTests.swift */,
+			);
+			name = ExtensionTests;
+			sourceTree = "<group>";
+		};
 		8C1CFE2A1C5ACA3200D5C249 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +216,7 @@
 		8C1CFE4A1C5ACA3300D5C249 /* ElementsTests */ = {
 			isa = PBXGroup;
 			children = (
+				213EA1BE1EED5D63000AE032 /* ExtensionTests */,
 				8CC6BD351C693BF900F0F611 /* ViewModelTests */,
 				8C9763C31C62B65000F56DA2 /* ModelTests */,
 				8C1CFE4B1C5ACA3300D5C249 /* ElementsTests.swift */,
@@ -538,6 +549,7 @@
 			files = (
 				8CC6BD371C693C2700F0F611 /* GameViewModelTests.swift in Sources */,
 				8C1CFE4C1C5ACA3300D5C249 /* ElementsTests.swift in Sources */,
+				213EA1C01EED5D94000AE032 /* ArrayExtTests.swift in Sources */,
 				8CFB5B3E1C6016EE007D5D6C /* ElementsManagerTests.swift in Sources */,
 				8C9763C81C62B74E00F56DA2 /* GameEngineTests.swift in Sources */,
 			);

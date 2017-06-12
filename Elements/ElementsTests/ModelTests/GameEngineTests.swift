@@ -44,9 +44,25 @@ class GameEngineTests: XCTestCase {
         XCTAssertEqual(gameEngine.answers.count, expectedNumberOfAnswers, "The number of prepared answers is not the same as expected one")
     }
     
+    //ATEMPTS
+    func testThatNumberOfAtteptsAtTheVeryBeginningIsEqualThree() {
+        //TODO:
+    }
+    
+    func testThatIncorrectAnswerDecreasedNumberOfAttempts() {
+        //TODO:
+    }
+    
     //POINTS
     func testThatPointsCounterAtTheVeryBeginingIsEqualZero() {
         XCTAssertEqual(gameEngine.points, 0, "Points counter is not equal zero at the very beginning")
+    }
+    
+    func testThatAfterFirstCorrectAnswerPointsScoreIs1() {
+        let correctAnswer = gameEngine.correctAnswer
+        let _ = gameEngine.userHasAnswered(correctAnswer)
+        let kExpectedNumberOfPoints = 1
+        XCTAssertEqual(gameEngine.points, kExpectedNumberOfPoints, "After first correct answer points counter should be equal 1")
     }
     
     // GAME OVER
@@ -56,8 +72,7 @@ class GameEngineTests: XCTestCase {
     
     func testThatGameIsOverAfter3Mistakes() {
         let kTestIncorrectAnswer = "xxx"
-        (1...3).forEach { _ in let _ = gameEngine.isCorrect(userAnswer: kTestIncorrectAnswer)}
+        (1...3).forEach { _ in let _ = gameEngine.userHasAnswered(kTestIncorrectAnswer)}
         XCTAssert(gameEngine.isGameOver)
     }
-
 }
