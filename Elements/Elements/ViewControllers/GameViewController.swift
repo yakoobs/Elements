@@ -64,6 +64,7 @@ extension GameViewController {
         for button in answersButtons where viewModel.isCorrect(answer: button.currentTitle!) {
             button.backgroundColor = UIColor.green
         }
+        
     }
     
     func callGameOverViewController() {
