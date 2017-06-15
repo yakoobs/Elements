@@ -46,11 +46,15 @@ class GameEngineTests: XCTestCase {
     
     //ATEMPTS
     func testThatNumberOfAtteptsAtTheVeryBeginningIsEqualThree() {
-        //TODO:
+        let kNumberOfAttempts = 3
+        XCTAssertEqual(gameEngine.kStartingNumberOfAttempts,kNumberOfAttempts,"At the game beginning the number of attempts should be equal to 3")
     }
     
     func testThatIncorrectAnswerDecreasedNumberOfAttempts() {
-        //TODO:
+        let kNumberOfAttemptsAfterFirstIncorrectAnswer = 2
+        let incorrectAnswer = "xxxx"
+        let _ = gameEngine.userHasAnswered(incorrectAnswer)
+        XCTAssertEqual(gameEngine.attempts, kNumberOfAttemptsAfterFirstIncorrectAnswer,"After first incorrect answer the number of attempts should be equal to 2")
     }
     
     //POINTS
