@@ -12,8 +12,8 @@ final class GameEngine {
     fileprivate let elementsManager = ElementsManager()
     fileprivate var gameElements = [GameElement]()
     fileprivate var currentGameElement: GameElement!
-    let kStartingNumberOfAttempts = 3
-    var playerMistakes = 0
+    fileprivate let kStartingNumberOfAttempts = 3
+    fileprivate var playerMistakes = 0
     var points = 0
     
     var attempts: Int {
