@@ -17,7 +17,7 @@ final class ElementsManager {
         loadElements()
     }
     
-    fileprivate func loadElements() {
+    private func loadElements() {
         let kPlistFileName = "Elements"
         let kPlistFileType = "plist"
         if let path = Bundle.main.path(forResource: kPlistFileName, ofType: kPlistFileType),

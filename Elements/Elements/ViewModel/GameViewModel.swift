@@ -9,7 +9,7 @@
 import Foundation
 
 struct GameViewModel {
-    fileprivate let gameEngine = GameEngine()
+    private let gameEngine = GameEngine()
     
     init() {
         drawNext()

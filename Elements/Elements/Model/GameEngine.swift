@@ -9,11 +9,11 @@
 import Foundation
 
 final class GameEngine {
-    fileprivate let elementsManager = ElementsManager()
-    fileprivate var gameElements = [GameElement]()
-    fileprivate var currentGameElement: GameElement!
-    fileprivate let kStartingNumberOfAttempts = 3
-    fileprivate var playerMistakes = 0
+    private let elementsManager = ElementsManager()
+    private var gameElements = [GameElement]()
+    private var currentGameElement: GameElement!
+    private let kStartingNumberOfAttempts = 3
+    private var playerMistakes = 0
     var points = 0
     
     var attempts: Int {
@@ -36,12 +36,12 @@ final class GameEngine {
         return playerMistakes >= kStartingNumberOfAttempts
     }
     
-    fileprivate func prepareGameElements() {
+    private func prepareGameElements() {
         gameElements = elementsManager.elements.map({ GameElement(element:$0, answers: prepareAnswers($0) ) })
         gameElements.shuffle()
     }
     
-    fileprivate func prepareAnswers(_ element:Element) -> [String] {
+    private func prepareAnswers(_ element:Element) -> [String] {
         var theOtherElements = elementsManager.elements.filter({$0.symbol != element.symbol})
         theOtherElements.shuffle()
         
