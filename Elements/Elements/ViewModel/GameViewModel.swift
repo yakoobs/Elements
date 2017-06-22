@@ -35,11 +35,8 @@ struct GameViewModel {
         return gameEngine.userHasAnswered(userAnswer)
     }
     
-    var dispatchTime: DispatchTime {
-        let kSeconds = 1.0
-        let delay = kSeconds * Double(NSEC_PER_SEC)
-        let dispatchTime = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
-        return dispatchTime
+    var nextQuestionDelay: Double {
+        return 1.0
     }
     
     var isGameOver: Bool {

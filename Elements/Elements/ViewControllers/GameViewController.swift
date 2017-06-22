@@ -49,7 +49,7 @@ extension GameViewController {
     }
     
     fileprivate func drawNextAfterDelay() {
-        DispatchQueue.main.asyncAfter(deadline: viewModel.dispatchTime, execute: { [weak self] in
+        Timer.doWithDelay(seconds: viewModel.nextQuestionDelay) { [weak self] in
             let isOver = self?.viewModel.isGameOver ?? true
             if isOver {
                 self?.callGameOverViewController()
@@ -57,7 +57,7 @@ extension GameViewController {
                 self?.viewModel.drawNext()
                 self?.setupSubviews()
             }
-        })
+        }
     }
     
     fileprivate func hilightCorrectAnswer() {
