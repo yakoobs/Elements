@@ -9,8 +9,8 @@
 import Foundation
 
 extension Timer {
-    static func doWithDelay(seconds: Double, after: @escaping () -> Void) {
-        let time = DispatchTime.now() + Double(Int64(seconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: time, execute: after)
+    static func runAfterDelay(seconds: Double, closure: @escaping () -> Void) {
+        let time = DispatchTime.now() + seconds
+        DispatchQueue.main.asyncAfter(deadline: time, execute: closure)
     }
 }
