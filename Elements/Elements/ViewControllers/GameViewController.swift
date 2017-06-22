@@ -49,7 +49,7 @@ extension GameViewController {
     }
     
     fileprivate func drawNextAfterDelay() {
-        Timer.runAfterDelay(seconds: viewModel.nextQuestionDelay) { [weak self] in
+        runAfterDelay(seconds: viewModel.nextQuestionDelay) { [weak self] in
             let isOver = self?.viewModel.isGameOver ?? true
             if isOver {
                 self?.callGameOverViewController()

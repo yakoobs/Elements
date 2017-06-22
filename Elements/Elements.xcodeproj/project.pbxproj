@@ -10,7 +10,7 @@
 		213EA1C01EED5D94000AE032 /* ArrayExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213EA1BF1EED5D94000AE032 /* ArrayExtTests.swift */; };
 		21DBD8ED1ECCD05500ED254B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBD8EC1ECCD05500ED254B /* MenuViewController.swift */; };
 		21F4F7C21ED6B2E200EFDFFF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4F7C11ED6B2E200EFDFFF /* GameOverViewController.swift */; };
-		688810D11EFC323400BAB562 /* TimerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688810D01EFC323400BAB562 /* TimerExt.swift */; };
+		688810D11EFC323400BAB562 /* UsefulHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688810D01EFC323400BAB562 /* UsefulHelpers.swift */; };
 		68C60EDD1EE75DC7005C579B /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C60EDC1EE75DC7005C579B /* UIViewExt.swift */; };
 		8C1CFE371C5ACA3200D5C249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE361C5ACA3200D5C249 /* AppDelegate.swift */; };
 		8C1CFE391C5ACA3200D5C249 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE381C5ACA3200D5C249 /* GameViewController.swift */; };
@@ -98,7 +98,7 @@
 		213EA1BF1EED5D94000AE032 /* ArrayExtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtTests.swift; path = ExtensionTests/ArrayExtTests.swift; sourceTree = "<group>"; };
 		21DBD8EC1ECCD05500ED254B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		21F4F7C11ED6B2E200EFDFFF /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
-		688810D01EFC323400BAB562 /* TimerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerExt.swift; path = Extensions/TimerExt.swift; sourceTree = "<group>"; };
+		688810D01EFC323400BAB562 /* UsefulHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsefulHelpers.swift; path = Extensions/UsefulHelpers.swift; sourceTree = "<group>"; };
 		68C60EDC1EE75DC7005C579B /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExt.swift; path = Extensions/UIViewExt.swift; sourceTree = "<group>"; };
 		8C1CFE331C5ACA3200D5C249 /* Elements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1CFE361C5ACA3200D5C249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 			children = (
 				8CC960D71C60A53300A58690 /* ArrayExt.swift */,
 				68C60EDC1EE75DC7005C579B /* UIViewExt.swift */,
-				688810D01EFC323400BAB562 /* TimerExt.swift */,
+				688810D01EFC323400BAB562 /* UsefulHelpers.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -535,7 +535,7 @@
 				8C1CFE391C5ACA3200D5C249 /* GameViewController.swift in Sources */,
 				8CDE414D1C60337D000269B1 /* GameEngine.swift in Sources */,
 				8C1CFE371C5ACA3200D5C249 /* AppDelegate.swift in Sources */,
-				688810D11EFC323400BAB562 /* TimerExt.swift in Sources */,
+				688810D11EFC323400BAB562 /* UsefulHelpers.swift in Sources */,
 				8CFB5B411C601730007D5D6C /* Element.swift in Sources */,
 				21F4F7C21ED6B2E200EFDFFF /* GameOverViewController.swift in Sources */,
 				68C60EDD1EE75DC7005C579B /* UIViewExt.swift in Sources */,
