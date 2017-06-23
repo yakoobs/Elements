@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W8N-5c-I2q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W8N-5c-I2q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,10 +26,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A5-ZK-Ebu">
-                                <rect key="frame" x="16" y="334" width="343" height="314"/>
+                                <rect key="frame" x="16" y="304" width="343" height="344"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-mY-LtL">
-                                        <rect key="frame" x="0.0" y="161" width="168" height="153"/>
+                                        <rect key="frame" x="0.0" y="176" width="168" height="168"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40186392007901239" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
@@ -50,11 +51,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKS-yV-Tyf">
-                                        <rect key="frame" x="0.0" y="0.0" width="168" height="153"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="168"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40186392007901239" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="153" id="PiA-yh-wgf"/>
-                                            <constraint firstAttribute="width" constant="168" id="Qw7-Me-HaG"/>
+                                            <constraint firstAttribute="width" secondItem="qKS-yV-Tyf" secondAttribute="height" multiplier="1:1" id="zOp-yb-NTb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
@@ -76,7 +76,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcp-Cu-hrF">
-                                        <rect key="frame" x="176" y="161" width="168" height="153"/>
+                                        <rect key="frame" x="176" y="176" width="168" height="168"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40186392007901239" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
@@ -98,7 +98,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqW-vd-MgQ">
-                                        <rect key="frame" x="176" y="0.0" width="168" height="153"/>
+                                        <rect key="frame" x="176" y="0.0" width="168" height="168"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40186392007901239" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <state key="normal" title="Button">
@@ -147,10 +147,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cC-md-AV4">
-                                <rect key="frame" x="16" y="101" width="343" height="183"/>
+                                <rect key="frame" x="16" y="101" width="343" height="153"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-ap-an7">
-                                        <rect key="frame" x="8" y="8" width="327" height="167"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="137"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -210,7 +210,6 @@
                             <constraint firstItem="4gJ-8y-0eS" firstAttribute="leading" secondItem="DgG-LI-mvE" secondAttribute="trailing" constant="8" symbolic="YES" id="hyu-qe-BSs"/>
                             <constraint firstItem="dDF-z1-69i" firstAttribute="leading" secondItem="RWY-bc-P1a" secondAttribute="trailing" constant="8" symbolic="YES" id="oex-bn-PCJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7A5-ZK-Ebu" secondAttribute="bottom" constant="19" id="pbX-ef-hO4"/>
-                            <constraint firstItem="7A5-ZK-Ebu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="334" id="uhd-XA-oFj"/>
                             <constraint firstItem="dDF-z1-69i" firstAttribute="baseline" secondItem="DgG-LI-mvE" secondAttribute="baseline" id="umS-TV-cZp"/>
                         </constraints>
                     </view>
