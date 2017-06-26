@@ -17,7 +17,6 @@
 		8C1CFE3C1C5ACA3200D5C249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE3A1C5ACA3200D5C249 /* Main.storyboard */; };
 		8C1CFE3E1C5ACA3200D5C249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE3D1C5ACA3200D5C249 /* Assets.xcassets */; };
 		8C1CFE411C5ACA3200D5C249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE3F1C5ACA3200D5C249 /* LaunchScreen.storyboard */; };
-		8C1CFE4C1C5ACA3300D5C249 /* ElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE4B1C5ACA3300D5C249 /* ElementsTests.swift */; };
 		8C1CFE571C5ACA3300D5C249 /* ElementsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CFE561C5ACA3300D5C249 /* ElementsUITests.swift */; };
 		8C1CFE5C1C5ACA3300D5C249 /* Elements WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8C1CFE5B1C5ACA3300D5C249 /* Elements WatchKit App.app */; };
 		8C1CFE621C5ACA3300D5C249 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE601C5ACA3300D5C249 /* Interface.storyboard */; };
@@ -108,7 +107,6 @@
 		8C1CFE401C5ACA3200D5C249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C1CFE421C5ACA3200D5C249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C1CFE471C5ACA3300D5C249 /* ElementsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C1CFE4B1C5ACA3300D5C249 /* ElementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsTests.swift; sourceTree = "<group>"; };
 		8C1CFE4D1C5ACA3300D5C249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C1CFE521C5ACA3300D5C249 /* ElementsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1CFE561C5ACA3300D5C249 /* ElementsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsUITests.swift; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				213EA1BE1EED5D63000AE032 /* ExtensionTests */,
 				8CC6BD351C693BF900F0F611 /* ViewModelTests */,
 				8C9763C31C62B65000F56DA2 /* ModelTests */,
-				8C1CFE4B1C5ACA3300D5C249 /* ElementsTests.swift */,
 				8C1CFE4D1C5ACA3300D5C249 /* Info.plist */,
 			);
 			path = ElementsTests;
@@ -552,7 +549,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC6BD371C693C2700F0F611 /* GameViewModelTests.swift in Sources */,
-				8C1CFE4C1C5ACA3300D5C249 /* ElementsTests.swift in Sources */,
 				213EA1C01EED5D94000AE032 /* ArrayExtTests.swift in Sources */,
 				8CFB5B3E1C6016EE007D5D6C /* ElementsManagerTests.swift in Sources */,
 				8C9763C81C62B74E00F56DA2 /* GameEngineTests.swift in Sources */,
