@@ -9,5 +9,13 @@
 import UIKit
 
 class GameOverViewController: UIViewController {
-
+    
+    var viewModel: GameViewModel?
+    
+    @IBOutlet weak var finalScoreLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        finalScoreLabel.text = viewModel?.points
+    }
 }

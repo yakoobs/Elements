@@ -70,8 +70,10 @@ extension GameViewController {
     func callGameOverViewController() {
         // here I must add some delay just before Game Over View Controller appear or some smooth animation
         // because transformation between last incorrect answer and "game over!" inscription it's too fast
-        let gameOverViewController  = self.storyboard?.instantiateViewController(withIdentifier: "gameOver")
-            self.present(gameOverViewController!, animated: true, completion: nil)
+        if let gameOverViewController  = self.storyboard?.instantiateViewController(withIdentifier: "gameOver") as? GameOverViewController {
+            gameOverViewController.viewModel = viewModel
+            self.present(gameOverViewController, animated: true, completion: nil)
         }
-
+        
     }
+}

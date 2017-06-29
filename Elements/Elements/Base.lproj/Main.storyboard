@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="374.66266866566718"/>
+            <point key="canvasLocation" x="2028" y="375"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="Fy6-ut-Ns0">
@@ -300,12 +300,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWX-X8-T8V">
-                                <rect key="frame" x="143" y="175" width="88" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="0UV-Ah-8MQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-Yo-hYh">
+                                <rect key="frame" x="110" y="181" width="155" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -313,21 +310,25 @@
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40186392009999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="3cr-x8-Fal" secondAttribute="trailing" constant="24" id="26w-bg-Eda"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eWX-X8-T8V" secondAttribute="trailing" constant="128" id="4l1-XT-QEK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4zm-Yo-hYh" secondAttribute="trailing" constant="94" id="3Qv-EG-EAY"/>
                             <constraint firstItem="AzJ-r1-qZA" firstAttribute="top" secondItem="HCg-5V-Yrt" secondAttribute="bottom" constant="32" id="5RZ-a4-kfg"/>
                             <constraint firstItem="F3G-Kv-wkq" firstAttribute="leading" secondItem="OHW-3j-kAI" secondAttribute="leadingMargin" constant="24" id="5dV-WC-AKX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3cr-x8-Fal" secondAttribute="trailing" constant="24" id="8hA-KU-esf"/>
                             <constraint firstItem="HCg-5V-Yrt" firstAttribute="leading" secondItem="OHW-3j-kAI" secondAttribute="leadingMargin" constant="68" id="9TB-fT-pYu"/>
                             <constraint firstItem="AzJ-r1-qZA" firstAttribute="leading" secondItem="OHW-3j-kAI" secondAttribute="leadingMargin" constant="24" id="CR1-Un-UOV"/>
                             <constraint firstItem="3cr-x8-Fal" firstAttribute="top" secondItem="HCg-5V-Yrt" secondAttribute="bottom" constant="32" id="CxD-vR-G15"/>
-                            <constraint firstItem="eWX-X8-T8V" firstAttribute="top" secondItem="F3G-Kv-wkq" secondAttribute="bottom" constant="30" id="Qfd-3f-Zxq"/>
+                            <constraint firstItem="HCg-5V-Yrt" firstAttribute="top" secondItem="4zm-Yo-hYh" secondAttribute="bottom" constant="44" id="QY6-Jz-WUs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HCg-5V-Yrt" secondAttribute="trailing" constant="69" id="UGx-VS-d69"/>
-                            <constraint firstItem="eWX-X8-T8V" firstAttribute="leading" secondItem="OHW-3j-kAI" secondAttribute="leadingMargin" constant="127" id="ebx-OU-Rsc"/>
                             <constraint firstItem="F3G-Kv-wkq" firstAttribute="top" secondItem="VJO-ci-qX3" secondAttribute="bottom" constant="64" id="kX3-iS-62p"/>
+                            <constraint firstItem="4zm-Yo-hYh" firstAttribute="leading" secondItem="OHW-3j-kAI" secondAttribute="leadingMargin" constant="94" id="nID-Eu-1NR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F3G-Kv-wkq" secondAttribute="trailing" constant="24" id="nXJ-m3-gFJ"/>
                             <constraint firstItem="HCg-5V-Yrt" firstAttribute="top" secondItem="F3G-Kv-wkq" secondAttribute="bottom" constant="148" id="pAl-Ew-oex"/>
+                            <constraint firstItem="4zm-Yo-hYh" firstAttribute="top" secondItem="F3G-Kv-wkq" secondAttribute="bottom" constant="36" id="u9v-Ox-uMJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finalScoreLabel" destination="4zm-Yo-hYh" id="bJr-M9-J5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96x-w2-hJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
