@@ -14,11 +14,6 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var statisticsButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
-    @IBAction func newGameButtonPressed(_ sender: UIButton) {
-        
-    }
-
-    
 }
 
 
