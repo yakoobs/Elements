@@ -14,6 +14,10 @@ class GameOverViewController: UIViewController {
     
     @IBOutlet weak var finalScoreLabel: UILabel!
     
+    @IBAction func goToMenu(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         finalScoreLabel.text = viewModel?.points
