@@ -372,7 +372,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="newGameButtonPressed:" destination="W8N-5c-I2q" eventType="touchUpInside" id="Ckj-JV-2Ln"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Mc3-sa-4Ld"/>
                                 </connections>
                             </button>
