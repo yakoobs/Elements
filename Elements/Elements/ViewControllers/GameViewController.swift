@@ -9,7 +9,7 @@
 import UIKit
 
 final class GameViewController: UIViewController {
-    fileprivate let viewModel = GameViewModel()
+    fileprivate var viewModel = GameViewModel()
     @IBOutlet weak var queryLabel: UILabel!
     @IBOutlet var answersButtons: [UIButton]!
     @IBOutlet weak var attemptsLabel: UILabel!
@@ -76,7 +76,15 @@ extension GameViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let gameOverViewController = segue.destination as? GameOverViewController {
             gameOverViewController.viewModel = viewModel
+            gameOverViewController.playAgainHandler = { [weak self] in
+                self?.resetGame()
+            }
         }
+    }
+    
+    fileprivate func resetGame() {
+        viewModel = GameViewModel()
+        setupSubviews()
     }
     
 }
