@@ -1,16 +1,16 @@
 //
-//  InterfaceController.swift
-//  Elements WatchKit Extension
+//  GameInterfaceController.swift
+//  Elements
 //
-//  Created by Jakub Sokołowski on 1/28/16.
-//  Copyright © 2016 jakub.sokolowski. All rights reserved.
+//  Created by Kuba Sokolowski on 10/07/2017.
+//  Copyright © 2017 jakub.sokolowski. All rights reserved.
 //
 
 import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class GameInterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
