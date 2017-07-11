@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </group>
                             <connections>
-                                <segue destination="RFf-mr-Hdc" kind="push" id="dm7-lK-8Im"/>
+                                <action selector="startGame" destination="itT-Z1-JB7" id="lkf-Co-dde"/>
                             </connections>
                         </button>
                     </items>
@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-146" y="-301"/>
         </scene>
-        <!--Game Interface Controller-->
+        <!--GameInterfaceController-->
         <scene sceneID="toc-sT-e43">
             <objects>
-                <controller id="RFf-mr-Hdc" customClass="GameInterfaceController" customModule="Elements_WatchKit_Extension">
+                <controller identifier="GameInterfaceController" id="RFf-mr-Hdc" customClass="GameInterfaceController" customModule="Elements_WatchKit_Extension">
                     <items>
                         <group width="1" height="0.29999999999999999" alignment="left" id="owJ-Al-a8P">
                             <items>

@@ -12,4 +12,7 @@ import Foundation
 
 class MenuInterfaceController: WKInterfaceController {
 
+    @IBAction func startGame() {
+        WKInterfaceController.reloadRootControllers(withNames: ["GameInterfaceController"], contexts: ["GameInterfaceController"])
+    }
 }
