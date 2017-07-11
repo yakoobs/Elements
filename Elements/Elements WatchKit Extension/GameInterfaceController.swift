@@ -24,20 +24,50 @@ class GameInterfaceController: WKInterfaceController {
         return [answerButton1, answerButton2, answerButton3, answerButton4]
     }
     
+    private let viewModel = GameViewModel()
+    
+    private var isUserInterfaceEnabled = true
+    
+    override func awake(withContext context: Any?) {
+        setupUI()
+    }
+    
+    private func setupUI() {
+        buttons.enumerated().forEach { (index, button) in
+            button.setBackgroundColor(.darkGray)
+            button.setTitle(viewModel.answers[index])
+        }
+        questionLabel.setText(viewModel.queryTitle)
+    }
+
     //MARK - User did select the answer - buttons handlers
     //It's not possible to send any argument in the WKInterfaceButton's IBAction, so every single button has its own action
     @IBAction func didSelectAnswer1() {
-        
+        didSelect(answerAtIndex: 0)
     }
     
     @IBAction func didSelectAnswer2() {
+        didSelect(answerAtIndex: 1)
     }
     
     @IBAction func didSelectAnswer3() {
+        didSelect(answerAtIndex: 2)
     }
     
     @IBAction func didSelectAnswer4() {
+        didSelect(answerAtIndex: 3)
     }
     
-    
+    private func didSelect(answerAtIndex index: Int) {
+        guard isUserInterfaceEnabled else { return }
+        isUserInterfaceEnabled = false
+        buttons[index].setBackgroundColor(.red)
+        buttons[viewModel.correctAnswerIndex].setBackgroundColor(.green)
+        
+        viewModel.drawNext()
+        runAfterDelay(seconds: viewModel.nextQuestionDelay) {[weak self] in
+            self?.isUserInterfaceEnabled = true
+            self?.setupUI()
+        }
+    }
 }

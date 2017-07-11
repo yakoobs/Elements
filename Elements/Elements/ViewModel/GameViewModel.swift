@@ -31,6 +31,10 @@ struct GameViewModel {
         return gameEngine.isCorrect(userAnswer: answer)
     }
     
+    var correctAnswerIndex: Int {
+        return answers.index(of: gameEngine.correctAnswer) ?? 0
+    }
+    
     func userHasAnswered(_ userAnswer: String) -> Bool {
         return gameEngine.userHasAnswered(userAnswer)
     }
