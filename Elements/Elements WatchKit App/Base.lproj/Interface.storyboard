@@ -33,38 +33,59 @@
             </objects>
             <point key="canvasLocation" x="-146" y="-301"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="Amb-rN-Grg">
-            <objects>
-                <controller id="gb3-Te-87i">
-                    <items>
-                        <label alignment="left" text="Label" id="AP3-DO-8l2"/>
-                        <imageView width="42" alignment="left" id="rSj-0s-Yja"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-185" y="77"/>
-        </scene>
         <!--Game Interface Controller-->
         <scene sceneID="toc-sT-e43">
             <objects>
                 <controller id="RFf-mr-Hdc" customClass="GameInterfaceController" customModule="Elements_WatchKit_Extension">
                     <items>
-                        <label height="47" alignment="center" text="Helium" id="wCK-B9-cjZ"/>
-                        <group width="1" height="41" alignment="left" verticalAlignment="bottom" spacing="4" id="kx8-aj-MGt">
+                        <group width="1" height="0.29999999999999999" alignment="left" id="owJ-Al-a8P">
                             <items>
-                                <button width="0.5" alignment="left" title="He" id="ctB-se-oGD"/>
-                                <button width="0.5" alignment="right" title="O" id="0dT-3a-IwL"/>
+                                <label alignment="center" verticalAlignment="center" text="Helium" id="hPx-IQ-efm"/>
                             </items>
                         </group>
-                        <group width="1" height="41" alignment="left" verticalAlignment="bottom" spacing="4" id="lLl-DI-PbJ">
+                        <group width="1" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="x5l-yJ-7zj">
                             <items>
-                                <button width="0.5" alignment="left" title="Au" id="YOX-pC-Rxk"/>
-                                <button width="0.5" alignment="right" title="Mg" id="coH-Hf-UqF"/>
+                                <group width="1" height="0.5" alignment="center" spacing="10" id="lLl-DI-PbJ">
+                                    <items>
+                                        <button width="0.5" alignment="left" verticalAlignment="center" title="Au" id="YOX-pC-Rxk">
+                                            <connections>
+                                                <action selector="didSelectAnswer1" destination="RFf-mr-Hdc" id="Pqc-uU-7nw"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" alignment="right" verticalAlignment="center" title="Mg" id="coH-Hf-UqF">
+                                            <connections>
+                                                <action selector="didSelectAnswer2" destination="RFf-mr-Hdc" id="BkF-nw-VTW"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
+                                </group>
+                                <group width="1" height="0.5" alignment="center" verticalAlignment="bottom" spacing="10" id="kx8-aj-MGt">
+                                    <items>
+                                        <button width="0.5" alignment="left" verticalAlignment="center" title="He" id="ctB-se-oGD">
+                                            <connections>
+                                                <action selector="didSelectAnswer3" destination="RFf-mr-Hdc" id="V2w-rp-mI5"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" alignment="right" verticalAlignment="center" title="O" id="0dT-3a-IwL">
+                                            <connections>
+                                                <action selector="didSelectAnswer4" destination="RFf-mr-Hdc" id="81V-N3-3sE"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
+                                </group>
                             </items>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="20"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="answerButton1" destination="YOX-pC-Rxk" id="C0T-iK-dnc"/>
+                        <outlet property="answerButton2" destination="coH-Hf-UqF" id="Gn4-iP-aaF"/>
+                        <outlet property="answerButton3" destination="ctB-se-oGD" id="TaA-BK-EJJ"/>
+                        <outlet property="answerButton4" destination="0dT-3a-IwL" id="GkK-LI-mlp"/>
+                        <outlet property="questionLabel" destination="hPx-IQ-efm" id="jeY-5e-9z0"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="154" y="-301"/>
