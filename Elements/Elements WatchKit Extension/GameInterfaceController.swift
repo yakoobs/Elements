@@ -26,7 +26,8 @@ class GameInterfaceController: WKInterfaceController {
     
     private let viewModel = GameViewModel()
     
-    private var isUserInterfaceEnabled = true
+    //We don't have in WatchKit a method to disable UI for user interactions..
+    private var isUIEnabbled = true
     
     override func awake(withContext context: Any?) {
         setupUI()
@@ -59,14 +60,14 @@ class GameInterfaceController: WKInterfaceController {
     }
     
     private func didSelect(answerAtIndex index: Int) {
-        guard isUserInterfaceEnabled else { return }
-        isUserInterfaceEnabled = false
+        guard isUIEnabbled else { return }
+        isUIEnabbled = false
         buttons[index].setBackgroundColor(.red)
         buttons[viewModel.correctAnswerIndex].setBackgroundColor(.green)
         
         viewModel.drawNext()
         runAfterDelay(seconds: viewModel.nextQuestionDelay) {[weak self] in
-            self?.isUserInterfaceEnabled = true
+            self?.isUIEnabbled = true
             self?.setupUI()
         }
     }
