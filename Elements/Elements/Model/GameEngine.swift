@@ -11,7 +11,7 @@ import Foundation
 final class GameEngine {
     private let elementsManager = ElementsManager()
     private var gameElements = [GameElement]()
-    private var currentGameElement: GameElement!
+    private var currentGameElement: GameElement?
     private let kStartingNumberOfAttempts = 3
     private var playerMistakes = 0
     var points = 0
@@ -21,15 +21,15 @@ final class GameEngine {
     }
 
     var query: String {
-        return currentGameElement.element.name
+        return currentGameElement?.element.name ?? ""
     }
     
     var answers: [String] {
-        return currentGameElement.answers
+        return currentGameElement?.answers ?? []
     }
     
     var correctAnswer: String {
-        return currentGameElement.correctAnswer
+        return currentGameElement?.correctAnswer ?? ""
     }
     
     var isGameOver: Bool {

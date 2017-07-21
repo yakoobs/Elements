@@ -61,7 +61,7 @@ extension GameViewController {
     }
     
     fileprivate func hilightCorrectAnswer() {
-        for button in answersButtons where viewModel.isCorrect(answer: button.currentTitle!) {
+        for button in answersButtons where viewModel.isCorrect(answer: button.currentTitle ?? "") {
             button.backgroundColor = UIColor.green
         }
         

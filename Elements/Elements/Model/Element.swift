@@ -16,7 +16,7 @@ struct Element {
         let kNameKey = "name"
         let kSymoblKey = "symbol"
         
-        name = dictionary[kNameKey] as! String
-        symbol = dictionary[kSymoblKey] as! String
+        name = (dictionary[kNameKey] as? String) ?? ""
+        symbol = (dictionary[kSymoblKey] as? String) ?? ""
     }
 }
