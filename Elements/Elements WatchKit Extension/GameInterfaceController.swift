@@ -12,6 +12,7 @@ import Foundation
 
 class GameInterfaceController: WKInterfaceController {
     @IBOutlet var questionLabel: WKInterfaceLabel!
+    @IBOutlet var pointsLabel: WKInterfaceLabel!
 
     //MARK - Buttons IBOutlets
     @IBOutlet var answerButton1: WKInterfaceButton!
@@ -39,6 +40,7 @@ class GameInterfaceController: WKInterfaceController {
             button.setTitle(viewModel.answers[index])
         }
         questionLabel.setText(viewModel.queryTitle)
+        pointsLabel.setText("Points: \(viewModel.points)")
     }
 
     //MARK - User did select the answer - buttons handlers
@@ -64,8 +66,10 @@ class GameInterfaceController: WKInterfaceController {
         isUIEnabbled = false
         buttons[index].setBackgroundColor(.red)
         buttons[viewModel.correctAnswerIndex].setBackgroundColor(.green)
-        
+       
+        viewModel.userHasChosenAnswerIndex(index)
         viewModel.drawNext()
+        
         runAfterDelay(seconds: viewModel.nextQuestionDelay) {[weak self] in
             self?.isUIEnabbled = true
             self?.setupUI()

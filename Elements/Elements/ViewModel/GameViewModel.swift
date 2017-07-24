@@ -39,6 +39,10 @@ struct GameViewModel {
         return gameEngine.userHasAnswered(userAnswer)
     }
     
+    func userHasChosenAnswerIndex(_ index: Int) {
+        let _ = userHasAnswered(answers[index])
+    }
+    
     var nextQuestionDelay: Double {
         return 1.0
     }

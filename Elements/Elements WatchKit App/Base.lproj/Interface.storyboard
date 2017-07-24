@@ -38,7 +38,10 @@
             <objects>
                 <controller identifier="GameInterfaceController" id="RFf-mr-Hdc" customClass="GameInterfaceController" customModule="Elements_WatchKit_Extension">
                     <items>
-                        <group width="1" height="0.29999999999999999" alignment="left" id="owJ-Al-a8P">
+                        <label alignment="left" text="Label" id="5nd-qG-pBP">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                        </label>
+                        <group width="1" height="0.20000000000000001" alignment="left" id="owJ-Al-a8P">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="Helium" id="hPx-IQ-efm"/>
                             </items>
@@ -84,6 +87,7 @@
                         <outlet property="answerButton2" destination="coH-Hf-UqF" id="Gn4-iP-aaF"/>
                         <outlet property="answerButton3" destination="ctB-se-oGD" id="TaA-BK-EJJ"/>
                         <outlet property="answerButton4" destination="0dT-3a-IwL" id="GkK-LI-mlp"/>
+                        <outlet property="pointsLabel" destination="5nd-qG-pBP" id="eer-wk-Aaw"/>
                         <outlet property="questionLabel" destination="hPx-IQ-efm" id="jeY-5e-9z0"/>
                     </connections>
                 </controller>
