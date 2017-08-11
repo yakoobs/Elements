@@ -26,7 +26,4 @@ final class ElementsManager {
             elements = array.map( { Element(dictionary: $0) } )
         }
     }
-    
-    
-    
 }
