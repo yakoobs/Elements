@@ -43,7 +43,7 @@ extension GameViewController {
         queryLabel.text = viewModel.queryTitle
         for (index,button) in answersButtons.enumerated() {
             button.setTitle(viewModel.answers[index], for: UIControlState())
-            button.backgroundColor = UIColor(colorLiteralRed: 102/255, green: 255/255, blue: 204/255, alpha: 1.0)
+            button.backgroundColor = .white
         }
         view.isUserInteractionEnabled = true
     }
