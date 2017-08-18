@@ -77,6 +77,6 @@ class GameEngineTests: XCTestCase {
     func testThatGameIsOverAfter3Mistakes() {
         let kTestIncorrectAnswer = "xxx"
         (1...3).forEach { _ in let _ = gameEngine.userHasAnswered(kTestIncorrectAnswer)}
-        XCTAssert(gameEngine.isGameOver)
+        XCTAssert(gameEngine.isGameOver, "After three incorrect answers game should be over")
     }
 }
