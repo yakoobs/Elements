@@ -10,10 +10,9 @@ import UIKit
 
 final class ElementsManager {
 
-    var elements: [Element]
+    var elements: [Element] = []
     
     init() {
-        elements = [Element]()
         loadElements()
     }
     
