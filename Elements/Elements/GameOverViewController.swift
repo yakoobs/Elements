@@ -11,7 +11,7 @@ import UIKit
 class GameOverViewController: UIViewController {
     
     var viewModel: GameViewModel?
-    var playAgainHandler: ((Void) -> Void)?
+    var playAgainHandler: (() -> Void)?
     
     @IBOutlet weak var finalScoreLabel: UILabel!
     
