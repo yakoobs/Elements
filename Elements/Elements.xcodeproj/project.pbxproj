@@ -41,7 +41,7 @@
 		8CC960D81C60A53300A58690 /* ArrayExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC960D71C60A53300A58690 /* ArrayExt.swift */; };
 		8CDE414B1C6032B5000269B1 /* GameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE414A1C6032B5000269B1 /* GameElement.swift */; };
 		8CDE414D1C60337D000269B1 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE414C1C60337D000269B1 /* GameEngine.swift */; };
-		8CFB5B3E1C6016EE007D5D6C /* ElementsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */; };
+		8CFB5B3E1C6016EE007D5D6C /* ElementsDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B3D1C6016EE007D5D6C /* ElementsDataProviderTests.swift */; };
 		8CFB5B411C601730007D5D6C /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B401C601730007D5D6C /* Element.swift */; };
 		8CFB5B431C601AC9007D5D6C /* ElementsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B421C601AC9007D5D6C /* ElementsDataProvider.swift */; };
 /* End PBXBuildFile section */
@@ -138,7 +138,7 @@
 		8CC960D71C60A53300A58690 /* ArrayExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExt.swift; path = Extensions/ArrayExt.swift; sourceTree = "<group>"; };
 		8CDE414A1C6032B5000269B1 /* GameElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameElement.swift; path = Model/GameElement.swift; sourceTree = "<group>"; };
 		8CDE414C1C60337D000269B1 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEngine.swift; path = Model/GameEngine.swift; sourceTree = "<group>"; };
-		8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementsManagerTests.swift; path = ModelTests/ElementsManagerTests.swift; sourceTree = "<group>"; };
+		8CFB5B3D1C6016EE007D5D6C /* ElementsDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementsDataProviderTests.swift; path = ModelTests/ElementsDataProviderTests.swift; sourceTree = "<group>"; };
 		8CFB5B401C601730007D5D6C /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Model/Element.swift; sourceTree = "<group>"; };
 		8CFB5B421C601AC9007D5D6C /* ElementsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementsDataProvider.swift; path = Model/ElementsDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -570,7 +570,7 @@
 			files = (
 				8CC6BD371C693C2700F0F611 /* GameViewModelTests.swift in Sources */,
 				213EA1C01EED5D94000AE032 /* ArrayExtTests.swift in Sources */,
-				8CFB5B3E1C6016EE007D5D6C /* ElementsManagerTests.swift in Sources */,
+				8CFB5B3E1C6016EE007D5D6C /* ElementsDataProviderTests.swift in Sources */,
 				8C9763C81C62B74E00F56DA2 /* GameEngineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

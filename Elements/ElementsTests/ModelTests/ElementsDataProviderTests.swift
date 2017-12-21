@@ -9,13 +9,13 @@
 import XCTest
 @testable import Elements
 
-class ElementsLoaderTests: XCTestCase {
+class ElementsDataProviderTests: XCTestCase {
 
-    var elementsManager: ElementsManager!
+    var elementsManager: ElementsDataProvider!
     
     override func setUp() {
         super.setUp()
-        elementsManager = ElementsManager()
+        elementsManager = ElementsDataProvider()
     }
     
     override func tearDown() {
