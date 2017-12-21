@@ -9,7 +9,7 @@
 import Foundation
 
 final class GameEngine {
-    private let elementsManager = ElementsManager()
+    private let elementsManager = ElementsDataProvider()
     private var gameElements = [GameElement]()
     private var currentGameElement: GameElement?
     private let kStartingNumberOfAttempts = 3

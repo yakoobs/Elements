@@ -15,7 +15,7 @@
 		688810D11EFC323400BAB562 /* UsefulHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688810D01EFC323400BAB562 /* UsefulHelpers.swift */; };
 		688A42B81F14F26A008D6A6B /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9763CA1C62C82700F56DA2 /* GameViewModel.swift */; };
 		688A42B91F14F2B0008D6A6B /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B401C601730007D5D6C /* Element.swift */; };
-		688A42BA1F14F2B0008D6A6B /* ElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B421C601AC9007D5D6C /* ElementsManager.swift */; };
+		688A42BA1F14F2B0008D6A6B /* ElementsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B421C601AC9007D5D6C /* ElementsDataProvider.swift */; };
 		688A42BB1F14F2B0008D6A6B /* GameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE414A1C6032B5000269B1 /* GameElement.swift */; };
 		688A42BC1F14F2B0008D6A6B /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE414C1C60337D000269B1 /* GameEngine.swift */; };
 		688A42BD1F14F2B8008D6A6B /* Elements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1CFE8E1C5AE22100D5C249 /* Elements.plist */; };
@@ -43,7 +43,7 @@
 		8CDE414D1C60337D000269B1 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE414C1C60337D000269B1 /* GameEngine.swift */; };
 		8CFB5B3E1C6016EE007D5D6C /* ElementsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */; };
 		8CFB5B411C601730007D5D6C /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B401C601730007D5D6C /* Element.swift */; };
-		8CFB5B431C601AC9007D5D6C /* ElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B421C601AC9007D5D6C /* ElementsManager.swift */; };
+		8CFB5B431C601AC9007D5D6C /* ElementsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB5B421C601AC9007D5D6C /* ElementsDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,7 +140,7 @@
 		8CDE414C1C60337D000269B1 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEngine.swift; path = Model/GameEngine.swift; sourceTree = "<group>"; };
 		8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementsManagerTests.swift; path = ModelTests/ElementsManagerTests.swift; sourceTree = "<group>"; };
 		8CFB5B401C601730007D5D6C /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Model/Element.swift; sourceTree = "<group>"; };
-		8CFB5B421C601AC9007D5D6C /* ElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementsManager.swift; path = Model/ElementsManager.swift; sourceTree = "<group>"; };
+		8CFB5B421C601AC9007D5D6C /* ElementsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementsDataProvider.swift; path = Model/ElementsDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,7 +278,7 @@
 		8C9763C31C62B65000F56DA2 /* ModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				8CFB5B3D1C6016EE007D5D6C /* ElementsManagerTests.swift */,
+				8CFB5B3D1C6016EE007D5D6C /* ElementsDataProviderTests.swift */,
 				8C9763C71C62B74E00F56DA2 /* GameEngineTests.swift */,
 			);
 			name = ModelTests;
@@ -335,7 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				8CFB5B401C601730007D5D6C /* Element.swift */,
-				8CFB5B421C601AC9007D5D6C /* ElementsManager.swift */,
+				8CFB5B421C601AC9007D5D6C /* ElementsDataProvider.swift */,
 				8CDE414A1C6032B5000269B1 /* GameElement.swift */,
 				8CDE414C1C60337D000269B1 /* GameEngine.swift */,
 			);
@@ -558,7 +558,7 @@
 				68C60EDD1EE75DC7005C579B /* UIViewExt.swift in Sources */,
 				21DBD8ED1ECCD05500ED254B /* MenuViewController.swift in Sources */,
 				8C9763CB1C62C82700F56DA2 /* GameViewModel.swift in Sources */,
-				8CFB5B431C601AC9007D5D6C /* ElementsManager.swift in Sources */,
+				8CFB5B431C601AC9007D5D6C /* ElementsDataProvider.swift in Sources */,
 				8CC960D81C60A53300A58690 /* ArrayExt.swift in Sources */,
 				8CDE414B1C6032B5000269B1 /* GameElement.swift in Sources */,
 			);
@@ -595,7 +595,7 @@
 				688A42BB1F14F2B0008D6A6B /* GameElement.swift in Sources */,
 				6829C65E1F141E2900330912 /* GameInterfaceController.swift in Sources */,
 				688A42BF1F1505CA008D6A6B /* UsefulHelpers.swift in Sources */,
-				688A42BA1F14F2B0008D6A6B /* ElementsManager.swift in Sources */,
+				688A42BA1F14F2B0008D6A6B /* ElementsDataProvider.swift in Sources */,
 				688A42B91F14F2B0008D6A6B /* Element.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
